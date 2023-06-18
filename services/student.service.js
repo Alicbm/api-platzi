@@ -5,8 +5,9 @@ class StudentService{
       {
         id: 1,
         name: 'name 1',
-        username: 'username 1',
+        email: 'email 1',
         points: 'points 1',
+        role: 'student',
         twiter: 'twiter 1',
         instagram: 'instagram 1',
         facebook: 'facebook 1',
@@ -16,8 +17,9 @@ class StudentService{
       {
         id: 2,
         name: 'name 2',
-        username: 'username 2',
+        email: 'email 2',
         points: 'points 2',
+        role: 'student',
         twiter: 'twiter 2',
         instagram: 'instagram 2',
         facebook: 'facebook 2',
@@ -27,8 +29,9 @@ class StudentService{
       {
         id: 3,
         name: 'name 3',
-        username: 'username 3',
+        email: 'email 3',
         points: 'points 3',
+        role: 'student',
         twiter: 'twiter 3',
         instagram: 'instagram 3',
         facebook: 'facebook 3',

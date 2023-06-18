@@ -1,27 +1,42 @@
-class AdminService{
+class UserService{
 
   constructor(){
     this.list = [
       {
         id: 1,
-        name: 'admin1',
-        username: 'ad1',
-        age: 41,
-        email: 'admin1@mail.com',
+        name: 'name 1',
+        email: 'email 1',
+        points: 'points 1',
+        role: 'student',
+        twiter: 'twiter 1',
+        instagram: 'instagram 1',
+        facebook: 'facebook 1',
+        approvedCourses: 'approvedCourses 1',
+        learningPaths: 'learningPaths 1',
       },
       {
         id: 2,
-        name: 'admin2',
-        username: 'ad2',
-        age: 42,
-        email: 'admin2@mail.com',
+        name: 'name 2',
+        email: 'email 2',
+        points: 'points 2',
+        role: 'admin',
+        twiter: 'twiter 2',
+        instagram: 'instagram 2',
+        facebook: 'facebook 2',
+        approvedCourses: 'approvedCourses 2',
+        learningPaths: 'learningPaths 2',
       },
       {
         id: 3,
-        name: 'admin3',
-        username: 'ad3',
-        age: 43,
-        email: 'admin3@mail.com',
+        name: 'name 3',
+        email: 'email 3',
+        points: 'points 3',
+        role: 'admin',
+        twiter: 'twiter 3',
+        instagram: 'instagram 3',
+        facebook: 'facebook 3',
+        approvedCourses: 'approvedCourses 3',
+        learningPaths: 'learningPaths 3',
       },
     ]
   }
@@ -62,4 +77,4 @@ class AdminService{
 
 }
 
-module.exports = AdminService
+module.exports = UserService

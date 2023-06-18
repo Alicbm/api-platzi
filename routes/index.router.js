@@ -7,6 +7,7 @@ const courseRouter = require('./course.router')
 const studentRouter = require('./student.router')
 const teacherRouter = require('./teacher.router')
 const learningPathRouter = require('./learningPath.router')
+const moduleRouter = require('./module.router')
 
 
 function routerApi(app){
@@ -21,6 +22,7 @@ function routerApi(app){
   app.use('/student', studentRouter)
   app.use('/teacher', teacherRouter)
   app.use('/learning-path', learningPathRouter)
+  app.use('/module', learningPathRouter)
 
 }
 
