@@ -6,8 +6,6 @@ const email = Joi.string();
 const points = Joi.number().integer();
 const role = Joi.string();
 const twiter = Joi.string();
-const instagram = Joi.string();
-const facebook = Joi.string();
 const approvedCourses = Joi.array();
 const learningPaths = Joi.array();
 const teacherCourse = Joi.array();
@@ -23,8 +21,6 @@ const createTeacherSchema = Joi.object({
   points: points.optional(),
   role: role.required(),
   twiter: twiter.optional(),
-  instagram: instagram.optional(),
-  facebook: facebook.optional(),
   approvedCourses: approvedCourses.optional(),
   learningPaths: learningPaths.optional(),
   teacherCourse: teacherCourse.required(),
@@ -37,8 +33,6 @@ const updateTeacherSchema = Joi.object({
   points: points.optional(),
   role: role.optional(),
   twiter: twiter.optional(),
-  instagram: instagram.optional(),
-  facebook: facebook.optional(),
   approvedCourses: approvedCourses.optional(),
   learningPaths: learningPaths.optional(),
   teacherCourse: teacherCourse.optional(),
