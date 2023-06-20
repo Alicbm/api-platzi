@@ -56,7 +56,7 @@ class Admin extends Model{
       sequelize,
       tableName: ADMIN_TABLE,
       modelName: 'Admin',
-      timestamp: false
+      timestamps: false
     }
   }
 }

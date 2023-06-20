@@ -6,8 +6,8 @@ const email = Joi.string();
 const points = Joi.number().integer();
 const role = Joi.string();
 const twiter = Joi.string();
-const approvedCourses = Joi.array();
-const learningPaths = Joi.array();
+// const approvedCourses = Joi.array();
+// const learningPaths = Joi.array();
 
 const getAdminSchema = Joi.object({
   id: id.required()
@@ -20,8 +20,8 @@ const createAdminSchema = Joi.object({
   points: points.optional(),
   role: role.required(),
   twiter: twiter.optional(),
-  approvedCourses: approvedCourses.optional(),
-  learningPaths: learningPaths.optional(),
+  // approvedCourses: approvedCourses.optional(),
+  // learningPaths: learningPaths.optional(),
 })
 
 const updateAdminSchema = Joi.object({
@@ -31,8 +31,8 @@ const updateAdminSchema = Joi.object({
   points: points.optional(),
   role: role.optional(),
   twiter: twiter.optional(),
-  approvedCourses: approvedCourses.optional(),
-  learningPaths: learningPaths.optional(),
+  // approvedCourses: approvedCourses.optional(),
+  // learningPaths: learningPaths.optional(),
 })
 
 module.exports = { getAdminSchema, createAdminSchema, updateAdminSchema }

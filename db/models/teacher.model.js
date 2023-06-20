@@ -62,7 +62,7 @@ class Teacher extends Model{
       sequelize,
       tableName: TEACHER_TABLE,
       modelName: 'Teacher',
-      timestamp: false
+      timestamps: false
     }
   }
 }

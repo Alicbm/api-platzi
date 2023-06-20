@@ -1,3 +1,5 @@
+const { models } = require('../libs/sequelize')
+
 class ClassService{
 
   constructor(){
@@ -16,37 +18,39 @@ class ClassService{
   }
 
   async getAdmin(){
-    return this.list
+    const res = await models.Class.findAll()
+    return res
   }
 
   async findOne(id){
-    const index = this.list.findIndex(item => item.id == id)
-    return this.list[index]
+    const res = await models.Class.findByPk(id)
+    return res
   }
 
   async createOne(body){
-    this.list.push(body)
-    return body
+    const res = await models.Class.create(body)
+    return res
   }
 
   async updateOne(id, body){
-    const index = this.list.findIndex(item => item.id == id)
-
-    this.list[index] = {
-      ...this.list[index],
-      ...body,
+    const element = await models.Class.findByPk(id)
+    if(element){
+      const res = await models.Class.update(body)
+      return res
+    }else{
+      console.log('Does not exist');
     }
-
-    return this.list[index]
 
   }
 
   async deleteOne(id){
-    const index = this.list.findIndex(item => item.id == id)
-    const element = this.list[index]
-    
-    this.list.splice(index, 1)
-    return element
+    const element = await models.Class.findByPk(id)
+    if(element){
+      const res = await models.Class.destroy()
+      return res
+    }else{
+      console.log('Does not exist');
+    }
   }
 
 }

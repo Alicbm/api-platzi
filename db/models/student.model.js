@@ -56,7 +56,7 @@ class Student extends Model{
       sequelize,
       tableName: STUDENT_TABLE,
       modelName: 'Student',
-      timestamp: false
+      timestamps: false
     }
   }
 }

@@ -1,5 +1,6 @@
-class UserService{
+const { models } = require('../libs/sequelize')
 
+class UserService{
   constructor(){
     this.list = [
       {
@@ -42,37 +43,39 @@ class UserService{
   }
 
   async getAdmin(){
-    return this.list
+    const res = await models.Admin.findAll()
+    return res
   }
 
   async findOne(id){
-    const index = this.list.findIndex(item => item.id == id)
-    return this.list[index]
+    const res = await models.Admin.findByPk(id)
+    return res
   }
 
   async createOne(body){
-    this.list.push(body)
-    return body
+    const res = await models.Admin.create(body)
+    return res
   }
 
   async updateOne(id, body){
-    const index = this.list.findIndex(item => item.id == id)
-
-    this.list[index] = {
-      ...this.list[index],
-      ...body,
+    const element = await models.Admin.findByPk(id)
+    if(element){
+      const res = await models.Admin.update(body)
+      return res
+    }else{
+      console.log('Does not exist');
     }
-
-    return this.list[index]
 
   }
 
   async deleteOne(id){
-    const index = this.list.findIndex(item => item.id == id)
-    const element = this.list[index]
-    
-    this.list.splice(index, 1)
-    return element
+    const element = await models.Admin.findByPk(id)
+    if(element){
+      const res = await models.Admin.destroy()
+      return res
+    }else{
+      console.log('Does not exist');
+    }
   }
 
 }

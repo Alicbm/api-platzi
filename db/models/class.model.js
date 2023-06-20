@@ -31,7 +31,7 @@ class Class extends Model {
       sequelize,
       tableName: CLASS_TABLE,
       modelName: 'Class',
-      timestamp: false
+      timestamps: false
     } 
   }
 }

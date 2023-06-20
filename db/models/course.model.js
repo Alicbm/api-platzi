@@ -29,7 +29,7 @@ class Course extends Model{
       sequelize,
       tableName: COURSE_TABLE,
       modelName: 'Course',
-      timestamp: false
+      timestamps: false
     }
   }
 

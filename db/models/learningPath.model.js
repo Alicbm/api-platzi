@@ -29,7 +29,7 @@ class LearningPath extends Model{
       sequelize,
       tableName: LEARNING_PATH_TABLE,
       modelName: 'LearningPath',
-      timestamp: false
+      timestamps: false
     }
   }
 

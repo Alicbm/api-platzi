@@ -29,7 +29,7 @@ class Module extends Model{
       sequelize,
       tableName: MODEL_TABLE,
       modelName: 'Module',
-      timestamp: false
+      timestamps: false
     }
   }
 
